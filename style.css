@@ -1,3 +1,31 @@
-h1, h2 {
+h1,
+h2 {
   font-family: Lato;
+}
+
+svg {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+svg[data-active='true'] {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+  transition-delay: 500ms;
+}
+
+.animation-text {
+  animation: showText 0.8s ease-in-out forwards;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
